@@ -1,0 +1,92 @@
+{
+  "Camisa": {
+    "Azul Marino": {
+      "imagen": "assets/images/Productos/Camisa/CamisaAzulMarino/Camisa.png",
+      "stock": 30
+    },
+    "Gris": {
+      "imagen": "assets/images/Productos/Camisa/CamisaGris/Camisa.png",
+      "stock": 30
+    }
+  },
+  "Cartuchera": {
+    "Azul Marino": {
+      "imagen": "assets/images/Productos/Cartuchera/CartucheraAzulMarino/Cartuchera.png",
+      "stock": 30
+    },
+    "Gris": {
+      "imagen": "assets/images/Productos/Cartuchera/CartucheraGris/Cartuchera.png",
+      "stock": 30
+    }
+  },
+  "Celular": {
+    "Azul Marino": {
+      "imagen": "assets/images/Productos/Celular/CelularAzulMarino/Celular.png",
+      "stock": 30
+    },
+    "Gris": {
+      "imagen": "assets/images/Productos/Celular/CelularGris/Celular.png",
+      "stock": 30
+    }
+  },
+  "Chompa": {
+    "Azul Marino": {
+      "imagen": "assets/images/Productos/Chompa/ChompaAzulMarino/Chompa.png",
+      "stock": 30
+    },
+    "Gris": {
+      "imagen": "assets/images/Productos/Chompa/ChompaGris/Chompa.png",
+      "stock": 30
+    }
+  },
+  "Cuaderno": {
+    "Azul Marino": {
+      "imagen": "assets/images/Productos/Cuaderno/CuadernoAzulMarino/Cuaderno.png",
+      "stock": 30
+    },
+    "Gris": {
+      "imagen": "assets/images/Productos/Cuaderno/CuadernoGris/Cuaderno.png",
+      "stock": 30
+    }
+  },
+  "Gorra": {
+    "Azul Marino": {
+      "imagen": "assets/images/Productos/Gorra/GorraAzulMarino/Gorra.png",
+      "stock": 30
+    },
+    "Gris": {
+      "imagen": "assets/images/Productos/Gorra/GorraGris/Gorra.png",
+      "stock": 30
+    }
+  },
+  "Mousepad": {
+    "Azul Marino": {
+      "imagen": "assets/images/Productos/Mousepad/MousepadAzulMarino/Mousepad.png",
+      "stock": 30
+    },
+    "Gris": {
+      "imagen": "assets/images/Productos/Mousepad/MousepadGris/Mousepad.png",
+      "stock": 30
+    }
+  },
+  "Rompecabezas": {
+    "Azul Marino": {
+      "imagen": "assets/images/Productos/Rompecabezas/RompecabezasAzulMarino/Rompecabezas.png",
+      "stock": 30
+    },
+    "Gris": {
+      "imagen": "assets/images/Productos/Rompecabezas/RompecabezasGris/Rompecabezas.png",
+      "stock": 30
+    }
+  },
+  "Termo": {
+    "Azul Marino": {
+      "imagen": "assets/images/Productos/Termo/TermosAzulMarino/Termo.png",
+      "stock": 30
+    },
+    "Gris": {
+      "imagen": "assets/images/Productos/Termo/Termo.png",
+      "stock": 30
+    }
+  }
+}
