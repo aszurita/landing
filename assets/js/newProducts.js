@@ -14,40 +14,33 @@ async function cargarProductos() {
     const swiperWrapper = document.getElementById('swiperWrapper');
 
     Object.keys(productos).forEach(key => {
-      const traductor = {
-        "Camisa": "Shirt",
-        "Chompa": "Sweater",
-        "Gorra": "Hat",
-        "Cartuchera": "Pencil Case",
-        "Celular": "Cell Phone",
-        "Mousepad": "Mousepad",
-        "Cuaderno": "Notebook",
-        "Rompecabezas": "Puzzle",
-        "Termo": "Thermos"
-      };
       
-      const producto = productos[key];  
-      const varianteAzulMarino = producto["Azul Marino"];
+      const dicProductos = productos[key];  
       
-      if (varianteAzulMarino) {
-        const swiperSlide = document.createElement('div');
-        swiperSlide.className = 'swiper-slide';
+      Object.keys(dicProductos).forEach(keyProducto => {
+        const producto = dicProductos[keyProducto];
+        const varianteAzulMarino = producto["Navy Blue"];
 
-        swiperSlide.innerHTML = `
-          <div class="banner-item image-zoom-effect">
-            <div class="image-holder ratio ratio-1x1">
-              <a href="#" class="mt-5">
-                <img src="${varianteAzulMarino.imagen}" alt="${key} ${"Azul Marino"}" class="img-fluid">
-              </a>
-              <p class="text-center display-6"> 
-                ${traductor[key]}
-              </p>
+        if (varianteAzulMarino) {
+          const swiperSlide = document.createElement('div');
+          swiperSlide.className = 'swiper-slide';
+  
+          swiperSlide.innerHTML = `
+            <div class="banner-item image-zoom-effect">
+              <div class="image-holder ratio ratio-1x1">
+                <a href="#" class="mt-5">
+                  <img src="${varianteAzulMarino.image}" alt="${keyProducto} Navy Blue" class="img-fluid">
+                </a>
+                <p class="text-center display-6"> 
+                  ${keyProducto}
+                </p>
+              </div>
             </div>
-          </div>
-        `;
-
-        swiperWrapper.appendChild(swiperSlide);
-      }
+          `;
+  
+          swiperWrapper.appendChild(swiperSlide);
+        }
+      });
     });
   } catch (error) {
     console.error('Error al cargar los productos:', error);

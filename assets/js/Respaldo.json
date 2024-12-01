@@ -1,0 +1,116 @@
+{
+  "Clothing": {
+    "Cap": {
+      "Gray": {
+        "image": "assets/images/Products/Cap/CapGray/Cap.png",
+        "price": 10.99,
+        "stock": 40
+      },
+      "Navy Blue": {
+        "image": "assets/images/Products/Cap/CapNavyBlue/Cap.png",
+        "price": 10.99,
+        "stock": 40
+      }
+    },
+    "Shirt": {
+      "Gray": {
+        "image": "assets/images/Products/Shirt/ShirtGray/Shirt.png",
+        "price": 15.99,
+        "stock": 40
+      },
+      "Navy Blue": {
+        "image": "assets/images/Products/Shirt/ShirtNavyBlue/Shirt.png",
+        "price": 15.99,
+        "stock": 40
+      }
+    },
+    "Sweater": {
+      "Gray": {
+        "image": "assets/images/Products/Sweater/SweaterGray/Sweater.png",
+        "price": 20.99,
+        "stock": 40
+      },
+      "Navy Blue": {
+        "image": "assets/images/Products/Sweater/SweaterNavyBlue/Sweater.png",
+        "price": 20.99,
+        "stock": 40
+      }
+    }
+  },
+  "Tech": {
+    "Mousepad": {
+      "Gray": {
+        "image": "assets/images/Products/Mousepad/MousepadGray/Mousepad.png",
+        "price": 12.99,
+        "stock": 40
+      },
+      "Navy Blue": {
+        "image": "assets/images/Products/Mousepad/MousepadNavyBlue/Mousepad.png",
+        "price": 12.99,
+        "stock": 40
+      }
+    },
+    "Phone Case": {
+      "Gray": {
+        "image": "assets/images/Products/Phone Case/PhoneCaseGray/PhoneCase.png",
+        "price": 10.99,
+        "stock": 40
+      },
+      "Navy Blue": {
+        "image": "assets/images/Products/Phone Case/PhoneCaseNavyBlue/PhoneCase.png",
+        "price": 10.99,
+        "stock": 40
+      }
+    }
+  },
+  "Varieties": {
+    "Notebook": {
+      "Gray": {
+        "image": "assets/images/Products/Notebook/NotebookGray/Notebook.png",
+        "price": 5.99,
+        "stock": 40
+      },
+      "Navy Blue": {
+        "image": "assets/images/Products/Notebook/NotebookNavyBlue/Notebook.png",
+        "price": 5.99,
+        "stock": 40
+      }
+    },
+    "Pencil Case": {
+      "Gray": {
+        "image": "assets/images/Products/PencilCase/PencilCaseGray/PencilCase.png",
+        "price": 15.99,
+        "stock": 40
+      },
+      "Navy Blue": {
+        "image": "assets/images/Products/PencilCase/PencilCaseNavyBlue/PencilCase.png",
+        "price": 15.99,
+        "stock": 40
+      }
+    },
+    "Puzzle": {
+      "Gray": {
+        "image": "assets/images/Products/Puzzle/PuzzleGray/Puzzle.png",
+        "price": 10.99,
+        "stock": 40
+      },
+      "Navy Blue": {
+        "image": "assets/images/Products/Puzzle/PuzzleNavyBlue/Puzzle.png",
+        "price": 10.99,
+        "stock": 40
+      }
+    },
+    "Thermos": {
+      "Gray": {
+        "image": "assets/images/Products/Thermos/ThermosGray/Thermos.png",
+        "price": 15.99,
+        "stock": 40
+      },
+      "Navy Blue": {
+        "image": "assets/images/Products/Thermos/ThermosNavyBlue/Thermos.png",
+        "price": 15.99,
+        "stock": 40
+      }
+    }
+  }
+}
