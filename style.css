@@ -1616,6 +1616,8 @@ a.btn-link.text-light:after {
   .containertext{
     padding: 20px 40px;
   }
+
+
 }
 
 @media (min-width: 760px) and (max-width: 990px) {
@@ -1680,6 +1682,10 @@ a.btn-link.text-light:after {
   }
   .containertext{
     padding: 20px 40px;
+  }
+  .text-centrado-responsive{
+    text-align: center;
+    
   }
 }
 
