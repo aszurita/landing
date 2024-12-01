@@ -38,7 +38,33 @@
   <script defer src="main.js"></script>
   <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
+  <style>
+    .hover-effect {
+      position: relative;
+      transition: color 0.3s ease;
+    }
 
+    .hover-effect::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: #007bff15;
+      transition: width 0.3s ease;
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+    .hover-effect:hover {
+      color: #007bff !important;
+    }
+
+    .hover-effect:hover::before {
+      width: 100%;
+    }
+  </style>
 </head>
 
 <body class="homepage">
@@ -116,7 +142,7 @@
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" id="category" viewBox="0 0 24 24">
         <path fill="currentColor"
-          d="M19 5.5h-6.28l-.32-1a3 3 0 0 0-2.84-2H5a3 3 0 0 0-3 3v13a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-10a3 3 0 0 0-3-3Zm1 13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1h4.56a1 1 0 0 1 .95.68l.54 1.64a1 1 0 0 0 .95.68h7a1 1 0 0 1 1 1Z" />
+          d="M19 5.5h-6.28l-.32-1a3 3 0 0 0-2.84-2H5a3 3 0 0 0-3 3v13a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm1 13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1h4.56a1 1 0 0 1 .95.68l.54 1.64a1 1 0 0 0 .95.68h7a1 1 0 0 1 1 1Z" />
       </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" id="calendar" viewBox="0 0 24 24">
         <path fill="currentColor"
@@ -349,7 +375,7 @@
             memorable.</li>
           <li class="text-white text-info-christmas text-responsive mt-3">This season, give the gift of joy, and make your
             celebrations extra special with our
-            one-of-a-kind holiday treasures. From the first snowfall to New Year’s Eve, our collection is designed to
+            one-of-a-kind holiday treasures. From the first snowfall to New Year's Eve, our collection is designed to
             make your Christmas truly unforgettable.</li>
           <li class="text-white text-info-christmas text-responsive mt-3">Shop now and fill your holidays with joy, laughter,
             and the magic of Christmas!</li>
