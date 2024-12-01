@@ -85,7 +85,20 @@ async function fetchAndGenerateWordCloud() {
       gridSize: 16,
       weightFactor: 10,
       fontFamily: 'Arial',
-      color: 'random-light',
+      color: function(word, weight) {
+        // Paleta de colores azules
+        const blueColors = [
+          '#000080', // Azul marino
+          '#0000CD', // Azul medio
+          '#0000FF', // Azul
+          '#1E90FF', // Azul dodger
+          '#4169E1', // Azul real
+          '#4682B4', // Azul acero
+          '#6495ED'  // Azul cadete
+        ];
+        // Usar un color aleatorio de la paleta azul
+        return blueColors[Math.floor(Math.random() * blueColors.length)];
+      },
       backgroundColor: 'transparent',
       drawOutOfBound: false,
       shrinkToFit: true
