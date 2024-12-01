@@ -192,16 +192,16 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 gap-1 gap-md-5 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link nav-link-mobile" href="#home" data-bs-dismiss="offcanvas">New Colections</a>
+                  <a class="nav-link" href="#home">New Collections</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link nav-link-mobile" href="#buy" data-bs-dismiss="offcanvas">Buy</a>
+                  <a class="nav-link" href="#buy">Buy</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link nav-link-mobile" href="#subscribe" data-bs-dismiss="offcanvas">Subscribe</a>
+                  <a class="nav-link" href="#subscribe">Subscribe</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link nav-link-mobile" href="#christmas" data-bs-dismiss="offcanvas">Celebrate Christmas with Us</a>
+                  <a class="nav-link" href="#christmas">Celebrate Christmas with Us</a>
                 </li>
               </ul>
             </div>
@@ -217,7 +217,7 @@
   <section id="home" class="bg-light bg-taws pt-5">
     <div class="container">
       <div class="row justify-content-center">
-        <h1 class="section-title text-center mt-4 title-tawsshop" data-aos="fade-up">TAWSSHOP</h1>
+        <h1 class="section-title titulohome text-center mt-4 title-tawsshop" data-aos="fade-up">TAWSSHOP</h1>
         <p class="section-title text-center"> Discover our collection and carry the essence of TAWSSHOP with you!
         </p>
         <div class="col-md-8 text-center mt-4" data-aos="fade-up" data-aos-delay="300">
@@ -347,9 +347,9 @@
   <!--Subscribe-->
   <section class="related-products product-carousel py-5 position-relative overflow-hidden" id="subscribe">
     <div class="container">
+      <h3 class="text-uppercase text-center">Subscribe & Suggest Products</h3>
       <div class="row">
-        <h3 class="text-uppercase text-center">Subscribe & Suggest Products</h3>
-        <div class="col-md-6">
+        <div class="col-md-6 my-auto">
           <div class="card text-white p-4">
             <form id="suggestionForm" onsubmit="handleFormSubmit(event)">
               <div class="mb-3">
@@ -372,10 +372,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="word-cloud-container">
-            <div id="wordCloud" class="bg-dark p-3 rounded" style="height: 290px">
-            </div>
-          </div>
+          <canvas id="wordCloud" width="400" height="400"></canvas>
         </div>
       </div>
     </div>
@@ -479,7 +476,7 @@
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('.nav-link-mobile').forEach(link => {
+      document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
         link.addEventListener('click', function(e) {
           e.preventDefault();
           
@@ -487,20 +484,27 @@
           const targetElement = document.querySelector(targetId);
           
           const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasNavbar'));
-          offcanvas.hide();
-        
-          offcanvas._element.addEventListener('hidden.bs.offcanvas', function handler() {
-            offcanvas._element.removeEventListener('hidden.bs.offcanvas', handler);
           
-            const offset = targetElement.offsetTop;
-          
-            window.scroll({
-              top: offset,
-              behavior: 'smooth'
-            });
-          }, { once: true }); 
+          if (offcanvas) {
+            offcanvas.hide();
+            
+            offcanvas._element.addEventListener('hidden.bs.offcanvas', function handler() {
+              offcanvas._element.removeEventListener('hidden.bs.offcanvas', handler);
+              scrollToTarget(targetElement);
+            }, { once: true });
+          } else {
+            scrollToTarget(targetElement);
+          }
         });
       });
+      
+      function scrollToTarget(element) {
+        const offset = element.offsetTop;
+        window.scroll({
+          top: offset,
+          behavior: 'smooth'
+        });
+      }
     });
     </script>
 </body>

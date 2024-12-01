@@ -52,28 +52,24 @@ async function subscribeAndSuggestProducts() {
     showToast('Hubo un error al enviar tu sugerencia. Por favor, intenta de nuevo.', false);
   }
 }
-// Variable para almacenar el último estado de las palabras
-let lastWordState = null;
 
+
+let lastWordState = null;
 async function fetchAndGenerateWordCloud() {
   try {
     const response = await fetch('https://usuarioproductos-c2968-default-rtdb.firebaseio.com/suggestions.json');
     const data = await response.json();
     
     if (!data) return;
+    
     const currentWordCounts = {};
     for (let key in data) {
       const suggestion = data[key].suggestion.toLowerCase();
       currentWordCounts[suggestion] = (currentWordCounts[suggestion] || 0) + 1;
     }
 
-    // Convertir a string para comparar
     const currentWordState = JSON.stringify(currentWordCounts);
-    
-    if (currentWordState === lastWordState) {
-      return;
-    }
-
+    if (currentWordState === lastWordState) return;
     lastWordState = currentWordState;
 
     const wordList = Object.keys(currentWordCounts).map(word => ({
@@ -83,15 +79,16 @@ async function fetchAndGenerateWordCloud() {
 
     const container = document.getElementById('wordCloud');
     container.innerHTML = '';
-
+    
     WordCloud(container, {
       list: wordList.map(item => [item.text, item.weight]),
-      gridSize: 10,
+      gridSize: 16,
       weightFactor: 10,
-      fontFamily: 'Arial, sans-serif',
+      fontFamily: 'Arial',
       color: 'random-light',
-      rotateRatio: 0.5,
-      rotationSteps: 2
+      backgroundColor: 'transparent',
+      drawOutOfBound: false,
+      shrinkToFit: true
     });
   } catch (error) {
     console.error('Error al actualizar la nube de palabras:', error);
