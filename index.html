@@ -26,6 +26,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!--Factura-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
@@ -35,6 +37,9 @@
   <script defer src="assets/js/viewProduct.js"></script>
   <script defer src="assets/js/invoice.js"></script>
   <script defer src="assets/js/Subscribe&SuggestProducts.js"></script>
+  <script defer src="main.js"></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
 
 </head>
 
@@ -167,6 +172,7 @@
 
   <div class="preloader text-white fs-6 text-uppercase overflow-hidden"></div>
 
+  <!--Navbar-->
   <nav class="navbar navbar-expand-lg bg-light text-uppercase fs-6 p-3 border-bottom align-items-center">
     <div class="container-fluid">
       <div class="row justify-content-between align-items-center w-100">
@@ -249,16 +255,19 @@
   <section class="collection bg-light position-relative py-5">
     <div class="container">
       <div class="row ">
-        <div class="title-xlarge text-uppercase txt-fx domino">Collection</div>
         <div class="collection-item d-flex flex-wrap my-5">
-          <div class="col-md-6 column-container d-flex">
+          <div class="col-md-6 column-container d-flex"data-aos="fade-right"
+          data-aos-offset="500"
+          data-aos-easing="ease-in-sine">
             <div class="image-holder h-100 w-100">
               <img src="assets/images/Video.gif" alt="collection" class="product-image img-fluid w-100 h-100 img-gif">
             </div>
           </div>
-          <div class="col-md-6 column-container bg-white d-flex">
+          <div class="col-md-6 column-container bg-white d-flex" data-aos="fade-left"
+          data-aos-offset="500"
+          data-aos-easing="ease-in-sine">
             <div class="collection-content p-5 m-0 m-lg-5 d-flex flex-column justify-content-between m-md10">
-              <h3 class="element-title text-uppercase">New Collection</h3>
+              <h3 class="element-title text-uppercase ">New Collection</h3>
               <p>Introducing our new collection, now available in a vibrant Navy Blue. In addition to the classic Gray,
                 you can find all our products in this fresh and stylish color. Explore our Shirts, Pencil Cases, Phones,
                 Sweaters, Notebooks, Caps, Mousepads, Puzzles, and Thermoses with a renewed touch!</p>
@@ -269,6 +278,52 @@
       </div>
     </div>
   </section>
+
+    <!--Innovations-->
+    <section class="collection bg-light position-relative py-5">
+      <div class="container">
+        <h2 class="text-center text-uppercase mb-5" data-aos="fade-up">Innovations</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4" data-aos="fade-right">
+            <div class="bg-white p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="mb-4">We Innovate the Way You Shop</h3>
+                <div class="image-holder mb-4">
+                  <img src="assets/images/Inovation-invoice.gif" alt="payment process" class="img-fluid w-100" style="max-height: 300px; object-fit: cover;">
+                </div>
+                <p class="mb-4">We revolutionize your shopping experience with our new smart payment system:</p>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Fast and secure payment process</li>
+                  <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Automatic invoice generation</li>
+                  <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Multiple payment methods available</li>
+                  <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Real-time order tracking</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4" data-aos="fade-left">
+            <div class="bg-white p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <h3 class="mb-4">We Innovate with Customized Products</h3>
+                <div class="image-holder mb-4">
+                  <img src="assets/images/Innovation-CustomizedProducts.gif" alt="customization process" class="img-fluid w-100" style="max-height: 300px; object-fit: cover;">
+                </div>
+                <p class="mb-4">Make each product unique and special with our new customization option:</p>
+                <ul class="list-unstyled">
+                  <li class="mb-2"><i class="fas fa-star text-warning me-2"></i>Personalize with your name</li>
+                  <li class="mb-2"><i class="fas fa-star text-warning me-2"></i>Choose exclusive designs</li>
+                  <li class="mb-2"><i class="fas fa-star text-warning me-2"></i>Create memorable gifts</li>
+                  <li class="mb-2"><i class="fas fa-star text-warning me-2"></i>Unique products tailored to you</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+
 
   <!--Purchase Section-->
   <section id="buy"
@@ -288,7 +343,9 @@
       </div>
     </div>
     <div class="row mx-3">
-      <div class="col-xs-6 col-md-3">
+      <div class="col-xs-6 col-md-3" data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
+      data-aos-easing="ease-in-sine">
         <h3 class="subtitle-products">Colors Available</h3>
         <div class="d-flex justify-content-start align-items-center mb-3">
           <div class="bg-taws rounded-circle" style="width: 50px; height: 50px;"></div>
@@ -304,7 +361,8 @@
 
       <div class="col-xs-12 col-sm-6 col-md-9 d-flex align-items-center justify-content-center flex-column">
         <h3 id="title-products">All Products</h3>
-        <div id="container-productselements"
+        <div id="container-productselements" data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
           class="d-flex w-100 flex-wrap gap-5 px-4 justify-content-center align-items-center">
         </div>
       </div>
@@ -315,11 +373,15 @@
   <section class="testimonials py-5 bg-taws flex flex-column justify-content-center align-items-center" id="christmas">
     <h3 class="text-uppercase text-white text-center">Celebrate Christmas with Us</h3>
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 ">
+      <div class="row align-items-center" >
+        <div class="col-md-6 " data-aos="fade-right"
+        data-aos-offset="500"
+        data-aos-easing="ease-in-sine">
           <img src="assets/images/ImagenNavidad.png" alt="Navidad" class="img-fluid h-75 img-responsive">
         </div>
-        <div class="col-md-6 containertext">
+        <div class="col-md-6 containertext" data-aos="fade-left"
+        data-aos-offset="500"
+        data-aos-easing="ease-in-sine">
           <ul class="list-unstyled">
           <li class="text-white text-info-christmas text-responsive">This Christmas, we invite you to experience the
             warmth and joy of the season with our
@@ -347,7 +409,7 @@
   </section>
 
   <!--Subscribe-->
-  <section class="related-products product-carousel py-5 position-relative overflow-hidden" id="subscribe">
+  <section class="related-products product-carousel py-5 position-relative overflow-hidden" id="subscribe" >
     <div class="container">
       <h3 class="text-uppercase text-center">Subscribe & Suggest Products</h3>
       <div class="row">
@@ -373,7 +435,10 @@
             </form>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="100"
+        data-aos-offset="0">
           <canvas id="wordCloud" width="400" height="400"></canvas>
         </div>
       </div>
@@ -510,7 +575,7 @@
     });
     </script>
 </body>
-<footer id="footer" class="mt-5 py-4 bg-taws text-white">
+<footer id="footer" class="mt-5 py-4 bg-taws text-white" data-aos="fade-up">
   <div class="container">
     <div class="row align-items-center justify-content-center">
       <div class="col-md-6 text-centrado-responsive">
