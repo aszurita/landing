@@ -1685,7 +1685,8 @@ a.btn-link.text-light:after {
   }
   .text-centrado-responsive{
     text-align: center;
-    
+    padding: 20px 0px;
+
   }
 }
 
