@@ -175,7 +175,7 @@
             TawsShop
           </a>
         </div>
-        <dyiv class="col-auto">
+        <div class="col-auto">
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
             aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
@@ -183,24 +183,30 @@
 
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 gap-1 gap-md-5 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link" href="#home">New Colections</a>
+                  <a class="nav-link nav-link-mobile" href="#home" data-bs-dismiss="offcanvas">New Colections</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#buy">Buy</a>
+                  <a class="nav-link nav-link-mobile" href="#buy" data-bs-dismiss="offcanvas">Buy</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#subscribe">Subscribe</a>
+                  <a class="nav-link nav-link-mobile" href="#subscribe" data-bs-dismiss="offcanvas">Subscribe</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#christmas">Celebrate Christmas with Us</a>
+                  <a class="nav-link nav-link-mobile" href="#christmas" data-bs-dismiss="offcanvas">Celebrate Christmas with Us</a>
                 </li>
               </ul>
             </div>
           </div>
-        </dyiv>
+        </div>
 
       </div>
 
@@ -408,7 +414,6 @@
           <div class="purchase-summary bg-light p-3 rounded mb-4">
             <h6 class="fw-bold mb-3">Order Summary</h6>
             <div id="modal-products-list" class="mb-3">
-              <!-- produtos que compra -->
             </div>
             <div class="d-flex justify-content-between border-top pt-2">
               <span class="fw-bold">Total:</span>
@@ -472,24 +477,55 @@
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.nav-link-mobile').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasNavbar'));
+          offcanvas.hide();
+        
+          offcanvas._element.addEventListener('hidden.bs.offcanvas', function handler() {
+            offcanvas._element.removeEventListener('hidden.bs.offcanvas', handler);
+          
+            const offset = targetElement.offsetTop;
+          
+            window.scroll({
+              top: offset,
+              behavior: 'smooth'
+            });
+          }, { once: true }); 
+        });
+      });
+    });
+    </script>
 </body>
 <footer id="footer" class="mt-5 py-4 bg-taws text-white">
   <div class="container">
     <div class="row align-items-center justify-content-center">
-      <!-- Lado izquierdo -->
       <div class="col-md-6 text-centrado-responsive">
         <h4 class="text-white">TawsShop</h4>
         <p class="text-light">Discover our collection and carry the essence of TAWSSHOP with you!</p>
         <div class="social-icons mt-3">
-          <a href="https://www.facebook.com/TawsEspol" class="me-3"><svg width="20" height="20"><use xlink:href="#facebook"></use></svg></a>
-          <a href="https://twitter.com/TawsEspol" class="me-3"><svg width="20" height="20"><use xlink:href="#twitter"></use></svg></a>
-          <a href="https://www.instagram.com/taws_espol/" class="me-3"><svg width="20" height="20"><use xlink:href="#instagram"></use></svg></a>
+          <a href="https://www.facebook.com/TawsEspol" class="me-3"><svg width="20" height="20">
+              <use xlink:href="#facebook"></use>
+            </svg></a>
+          <a href="https://twitter.com/TawsEspol" class="me-3"><svg width="20" height="20">
+              <use xlink:href="#twitter"></use>
+            </svg></a>
+          <a href="https://www.instagram.com/taws_espol/" class="me-3"><svg width="20" height="20">
+              <use xlink:href="#instagram"></use>
+            </svg></a>
         </div>
       </div>
-      <!-- Lado derecho -->
       <div class="col-md-6 d-flex flex-column text-centrado-responsive text-light">
         <p class="mb-0 text-center">© Copyright 2024 TawsShop All rights reserved</p>
-        <p class="text-center">Design by <a href="https://www.linkedin.com/in/angelo-saul-zurita-guerrero/" class="text-decoration-none text-white font-weight-bold">Angelo Zurita</a></p>
+        <p class="text-center">Design by <a href="https://www.linkedin.com/in/angelo-saul-zurita-guerrero/"
+            class="text-decoration-none text-white font-weight-bold">Angelo Zurita</a></p>
       </div>
     </div>
   </div>
