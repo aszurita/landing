@@ -1632,6 +1632,26 @@ a.btn-link.text-light:after {
   }
 }
 
+@media (min-width: 575px) and (max-width: 760px) {
+  .m-md10 {
+    margin-right: 10px;
+  }
+  .img-gif{
+    object-fit:fill;
+  }
+  .text-responsive{
+    font-size: 1.5vw !important;
+  }
+  .text-centrado-responsive{
+    text-align: center;
+    padding: 20px 0px;
+  }
+}
+
+
+
+
+
 @media not all and (min-width: 760px) and (max-width: 990px) {
   .img-gif{
     object-fit: cover;
